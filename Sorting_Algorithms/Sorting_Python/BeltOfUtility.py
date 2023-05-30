@@ -1,4 +1,4 @@
-def Insertion_sort(A)->list:
+def insertion_sort(A)->list:
     '''This function takes an array of data and returns a sorted version of that array using the insertion sort Algorithms
     '''
     for j in range(1, len(A)): 
@@ -8,6 +8,14 @@ def Insertion_sort(A)->list:
             A[i+1]=A[i]
             i=i-1
         A[i+1]=key # take the element that comes after the current key as the new key
+
+def buble_sort(A)->list:
+    for i in range(len(A)-1):
+        
+        for j in range(len(A)-1,i,-1):
+            if A[j]<A[j-1]:
+                A[j],A[j-1]=A[j-1],A[j]
+
     
 
 #Examples
@@ -17,8 +25,20 @@ print("Before sorting \n")
 print("---------------------------------")
 print(StringEXample)
 
-Insertion_sort(StringEXample)
+insertion_sort(StringEXample)
 
-print("\n After sorting \n")
+print("\n After sorting with insertion sort \n")
 print("---------------------------------")
 print(StringEXample)
+
+StringEXample1=["Mtu Mwema","New York","California","Bujumburan","Asiatique","Gishingano","Nyakazu"]
+
+print("Before sorting \n")
+print("---------------------------------")
+print(StringEXample1)
+
+buble_sort(StringEXample1)
+
+print("\n After sorting with buble sort \n")
+print("---------------------------------")
+print(StringEXample1)
