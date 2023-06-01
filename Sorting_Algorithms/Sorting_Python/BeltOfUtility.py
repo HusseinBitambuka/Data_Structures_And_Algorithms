@@ -62,16 +62,17 @@ def merge(A,p,q,r):
 
 def merge_sort(A,p,r):
     '''This is the devide and combine part of the merge sort algoritm'''
-    if p<r:
-        q=[(p+r)/2]
+    if r-p>1:
+        q=(r+2)/2
         merge_sort(A,p,q)
-        merge_sort(A,q+1,r)
+        merge_sort(A,q,r)
         merge(A,p,q,r)
-        
+    return
+
 def mergeSort(A):
     "this is a helper method for the user"
-    p=len(A)
-    r=0
+    r=len(A)
+    p=0
     merge_sort(A,p,r)
 
 
@@ -82,32 +83,9 @@ print("Before sorting \n")
 print("---------------------------------")
 print(StringEXample)
 
-insertion_sort(StringEXample)
+mergeSort(StringEXample)
 
 print("\n After sorting with insertion sort \n")
 print("---------------------------------")
 print(StringEXample)
 
-StringEXample1=["Mtu Mwema","New York","California","Bujumburan","Asiatique","Gishingano","Nyakazu"]
-
-print("Before sorting \n")
-print("---------------------------------")
-print(StringEXample1)
-
-buble_sort(StringEXample1)
-
-print("\n After sorting with buble sort \n")
-print("---------------------------------")
-print(StringEXample1)
-
-StringEXample2=["Mtu Mwema","New York","California","Bujumburan","Asiatique","Gishingano","Nyakazu"]
-
-print("Before sorting \n")
-print("---------------------------------")
-print(StringEXample2)
-
-mergeSort(StringEXample2)
-
-print("\n After sorting with merge sort \n")
-print("---------------------------------")
-print(StringEXample2)
