@@ -39,7 +39,8 @@ def merge(A,p,q,r):
         right.append(A[j])
 
     # 
-    i,j=0
+    i=0
+    j=0
     k=p
     while(i<leftLenght and j<rightLenght): # if either of the array is empty, terminate the loop
         if(left[i]<right[i]): # check to see which between the left and the right element goes first in the array
@@ -63,7 +64,7 @@ def merge(A,p,q,r):
 def merge_sort(A,p,r):
     '''This is the devide and combine part of the merge sort algoritm'''
     if r-p>1:
-        q=(r+2)/2
+        q=(r+p)//2
         merge_sort(A,p,q)
         merge_sort(A,q,r)
         merge(A,p,q,r)
