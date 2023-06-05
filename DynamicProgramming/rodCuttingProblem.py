@@ -16,3 +16,7 @@ print(len(p))
 n=3
 
 print(" the optimal revenue from cutting the rod of length "+str(n)+" is "+str(cutRod(p,n-1)))
+
+string="midos"
+print(string[-1])
+mido=[]
