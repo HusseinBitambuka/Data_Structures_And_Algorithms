@@ -69,6 +69,8 @@ while cheker:
         cheker=False
     solution=solution.next
 
+h=str(12156)
+print(int(h))
 
 
 
