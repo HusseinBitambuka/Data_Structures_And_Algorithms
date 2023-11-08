@@ -1,11 +1,11 @@
-h={'key1':1, 'key2':2,'key3':3}
-for k in h:
-    print(k)
+def reversingString(s):
+    if len(s) == 1:
+        return s
+    return s[-1] + reversingString(s[:-1])
+print(reversingString("watu wenye akili wanaelewa"))
 
-for k in h.keys():
-    print(k)
-
-print("")
-
-print(list(h.keys()))
-print((4%2))
+array = [1,2,3,4,5,6,7,8,9,10]
+if array[len(array)]:
+    print("yes")
+else:
+    print(array[len(array)-1])
